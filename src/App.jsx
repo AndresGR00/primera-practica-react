@@ -1,8 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import ShowCount from "./components/ShowCount/ShowCount";
-import AddButton from "./components/AddButton/AddButton";
-import SubtractButton from "./components/SubtractButton/SubtractButton";
+import { Button } from "./components/Button/Button";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,8 +18,8 @@ function App() {
     <div className="App flex flex-col gap-4">
       <ShowCount count={count} />
       <div className="Buttons flex gap-6 items-center justify-center">
-        <SubtractButton onClick={decrementCount} />
-        <AddButton onClick={incrementCount} />
+        <Button onClick={decrementCount} name={"Subtract"} />
+        <Button onClick={incrementCount} name={"Add"} />
       </div>
     </div>
   );
